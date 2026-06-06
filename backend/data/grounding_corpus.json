@@ -1,0 +1,149 @@
+{
+  "name": "Crystal Jain",
+  "contact": {
+    "phone": "+91-6377643564",
+    "email": "crystaljain2711@gmail.com",
+    "github": "https://github.com/crystaljain27",
+    "linkedin": "https://www.linkedin.com/in/crystal-jain-b10025264",
+    "portfolio": "https://personal-portfolio-six-virid-53.vercel.app/",
+    "codeforces": "https://codeforces.com/profile/sweeny",
+    "codechef": "https://www.codechef.com/users/sweeny_27",
+    "leetcode": "https://leetcode.com/u/sweeny_27/"
+  },
+  "education": [
+    {
+      "institution": "Graphic Era Hill University, Dehradun",
+      "degree": "B.Tech in Computer Science and Engineering",
+      "period": "2022 - Present",
+      "grade": "7.0/10 CGPA"
+    },
+    {
+      "institution": "John Milton, Agra",
+      "degree": "12th CBSE",
+      "period": "2022",
+      "grade": "80.2%"
+    },
+    {
+      "institution": "Colonel's Brightland, Agra",
+      "degree": "10th CBSE",
+      "period": "2020",
+      "grade": "90.6%"
+    }
+  ],
+  "experience": [
+    {
+      "role": "SDE Intern",
+      "company": "Nablasol",
+      "period": "March 2026 - Present",
+      "location": "Remote",
+      "highlights": [
+        "Resolved concurrent data overrides across 2 CRM modules (Accounts, Leads) by building a record locking mechanism, ensuring reliable multi-user audit tracking across 10+ workflows.",
+        "Built JWT-secured REST APIs for a role-based KPI dashboard, aggregating metrics across 4 database tables with real-time analytics and strict access control.",
+        "Stabilized CRM infrastructure by refactoring 10+ legacy cURL wrappers into standardized REST handlers, reducing HTTP 500/404 errors by 85% across staging environments."
+      ]
+    },
+    {
+      "role": "Frontend Developer Intern",
+      "company": "Mercato Agency",
+      "period": "May 2025 - July 2025",
+      "location": "Remote",
+      "highlights": [
+        "Developed and refined React-based dashboard components to improve UI consistency and data visibility.",
+        "Integrated frontend with REST APIs and handled data inconsistencies to ensure smooth user experience.",
+        "Collaborated with backend developers to debug UI and data rendering issues during API integration."
+      ]
+    }
+  ],
+  "projects": {
+    "AI-Resume-Builder": {
+      "tech_stack": {
+        "frontend": ["React (Vite)", "TailwindCSS", "React Router", "Lucide Icons", "Axios"],
+        "backend": ["Node.js", "Express.js", "MongoDB (Mongoose)", "Multer", "ImageKit", "Google Gemini API"],
+        "deployment": "Vercel (Frontend), Render (Backend)"
+      },
+      "features": [
+        "User authentication (Signup/Login)",
+        "Create multiple resumes with real-time preview",
+        "AI-enhanced Professional Summary and Experience Descriptions using Google Gemini API",
+        "Auto-extract resume fields from uploaded PDFs",
+        "Profile image upload with background removal via ImageKit integration",
+        "Publicly publish resumes with shareable links and option to download as PDF"
+      ],
+      "links": {
+        "live": "https://ai-resume-builder-rho-gold.vercel.app/",
+        "source": "https://github.com/crystaljain27/AI-Resume-Builder"
+      },
+      "design_tradeoffs": "Chose Render free tier for backend causing initial spin-up latency (~50s delay on first request), but cost-effective. Used Gemini for AI features because it was faster and cheaper than OpenAI.",
+      "what_i_would_do_differently": "Implement WebSockets for real-time collaborative resume editing, and add more ATS (Applicant Tracking System) scoring integration directly in the builder.",
+      "commits": [
+        {"hash": "08f9239", "author": "Crystal Jain", "date": "2025-11-14", "message": "Update frontend demo link in README"},
+        {"hash": "488bb71", "author": "Crystal Jain", "date": "2025-11-14", "message": "Revise live demo links in README"},
+        {"hash": "8276984", "author": "Crystal Jain", "date": "2025-11-14", "message": "Create README.md"},
+        {"hash": "ad2fb06", "author": "Crystal Jain", "date": "2025-11-14", "message": "Fix API base URL env variable (VITE_API_URL)"},
+        {"hash": "58b71f9", "author": "Crystal Jain", "date": "2025-11-14", "message": "Initial commit"}
+      ]
+    },
+    "QuickBlog-FullStack": {
+      "tech_stack": {
+        "frontend": ["React.js (Vite)", "Tailwind CSS", "Motion", "React Router", "ImageKit CDN"],
+        "backend": ["Node.js", "Express.js", "MongoDB (Mongoose)", "JWT Authentication"],
+        "ai_integration": "Auto-generate blog descriptions using OpenAI API",
+        "deployment": "Vercel (Frontend), Vercel Serverless Functions (Backend)"
+      },
+      "features": [
+        "Full-stack blog platform with categories, filtering, and search functionality",
+        "User commenting system on blog posts",
+        "Admin Dashboard with metrics, publishing controls, and CRUD operations",
+        "AI-powered description and SEO text generator using OpenAI API",
+        "Fast image delivery and optimization via ImageKit integration"
+      ],
+      "links": {
+        "live": "https://quick-blog-client-murex.vercel.app/",
+        "source": "https://github.com/crystaljain27/QuickBlog-FullStack"
+      },
+      "design_tradeoffs": "Deployed backend on Vercel Serverless which has a 10s execution timeout (cold start issue), but yields excellent cost-efficiency and scales to zero. Used standard JWT stored in HTTP-Only cookies for secure auth.",
+      "what_i_would_do_differently": "Switch to Next.js to leverage Incremental Static Regeneration (ISR) for fast blog rendering and better SEO, since search engine bots would index pre-rendered pages faster.",
+      "commits": [
+        {"hash": "001c06d", "author": "Crystal Jain", "date": "2025-11-15", "message": "Updated client folder with latest changes"},
+        {"hash": "4d94fb1", "author": "Crystal Jain", "date": "2025-11-14", "message": "Add README for QuickBlog project"},
+        {"hash": "6feb11d", "author": "Crystal Jain", "date": "2025-11-14", "message": "Initial Commit"}
+      ]
+    },
+    "Income-Predictor": {
+      "tech_stack": {
+        "model": ["Python", "Scikit-learn", "Pandas", "NumPy"],
+        "backend": ["Flask"],
+        "frontend": ["HTML", "CSS"],
+        "deployment": ["Docker", "GitHub Actions (CI/CD)"]
+      },
+      "features": [
+        "Predicts whether an individual earns >$50K/year based on demographic data (age, education, hours worked, occupation, etc.)",
+        "Full data analysis, preprocessing, and model selection in Jupyter notebook",
+        "Standardized ML pipeline (Scaling, Label Encoding, standard algorithms like XGBoost)",
+        "Flask web app interface to query predictions against serialized model (pickle)",
+        "Fully containerized Docker build deployed via GitHub Actions CI/CD to Docker Hub / hosting provider"
+      ],
+      "links": {
+        "source": "https://github.com/crystaljain27/Income-Predictor"
+      },
+      "design_tradeoffs": "Used simple Flask server as the API layer rather than FastAPI because it was a lightweight model, and Flask was quick to configure for HTML templates. Serialized model as pickle, which has security implications (unpickling untrusted files), but fine for self-contained server.",
+      "what_i_would_do_differently": "Use FastAPI for automatic OpenAPI documentation, asynchronous request handling, and type validation using Pydantic. Train an ensemble of XGBoost and LightGBM for improved accuracy.",
+      "commits": [
+        {"hash": "e1a5117", "author": "Crystal Jain", "date": "2025-12-18", "message": "Update README with correct setup and usage details"},
+        {"hash": "c632878", "author": "Crystal Jain", "date": "2025-12-18", "message": "Initial commit: Income Prediction ML web application"}
+      ]
+    }
+  },
+  "achievements": [
+    "Hackathon Finalist: Selected as a finalist in Hack Heist Hackathon 2025, building a scalable AI Drone for Disaster Management among 300+ participants.",
+    "Competitive Programming: Codeforces rating 1680+, CodeChef rating 1810+, LeetCode rating 1850+ (Top 7% globally)."
+  ],
+  "skills": {
+    "languages": ["C++", "Python", "JavaScript", "TypeScript", "Java", "PHP"],
+    "frontend": ["React.js", "HTML", "CSS", "Tailwind CSS", "Bootstrap"],
+    "backend": ["Node.js", "Express.js", "Flask", "REST APIs"],
+    "databases": ["MongoDB", "MySQL"],
+    "ai_ml": ["Scikit-learn", "Pandas", "OpenAI API", "Google Gemini API"],
+    "tools": ["Git", "GitHub", "Postman", "VS Code", "Jupyter Notebook", "Vercel"]
+  }
+}

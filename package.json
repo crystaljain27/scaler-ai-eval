@@ -1,0 +1,11 @@
+{
+  "name": "scaler-ai-persona",
+  "version": "1.0.0",
+  "description": "Root orchestrator for SCALER AI Persona backend and frontend",
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix client",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "npx concurrently -n \"backend,client\" -c \"cyan,magenta\" \"npm run dev:backend\" \"npm run dev:client\""
+  }
+}

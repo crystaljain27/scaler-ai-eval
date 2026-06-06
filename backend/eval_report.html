@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evals Report</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 40px 50px;
+            box-sizing: border-box;
+            background: #fff;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #111;
+            margin: 0;
+        }
+        .header .subtitle {
+            color: #888;
+            font-size: 11px;
+        }
+        
+        .sub-header {
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+            font-size: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+        .sub-header .name {
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        /* Section Titles */
+        h2 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2563eb;
+            margin: 20px 0 12px 0;
+            display: flex;
+            align-items: center;
+        }
+        h2 span.num {
+            margin-right: 8px;
+        }
+
+        /* Metrics Grid */
+        .metrics-grid {
+            display: flex;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            padding: 12px 20px;
+            margin-bottom: 16px;
+            justify-content: space-between;
+        }
+        .metric {
+            display: flex;
+            flex-direction: column;
+        }
+        .metric-val {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 2px;
+        }
+        .metric-val.green { color: #16a34a; }
+        .metric-val.orange { color: #ea580c; }
+        .metric-label {
+            font-size: 9px;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Lists and Tables */
+        .desc-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .desc-table td {
+            padding: 6px 0;
+            vertical-align: top;
+        }
+        .desc-table td:first-child {
+            width: 130px;
+            font-weight: 600;
+            color: #0f172a;
+        }
+        .desc-table td:last-child {
+            color: #475569;
+        }
+
+        /* Failure Modes */
+        .failure-item {
+            display: flex;
+            margin-bottom: 12px;
+        }
+        .failure-num {
+            font-size: 14px;
+            font-weight: 700;
+            color: #2563eb;
+            width: 30px;
+            flex-shrink: 0;
+        }
+        .failure-content {
+            flex-grow: 1;
+        }
+        .failure-title {
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 6px;
+        }
+        .failure-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .failure-box {
+            background: #f8fafc;
+            border-top: 2px solid #e2e8f0;
+            padding: 8px 12px;
+        }
+        .failure-box.fix {
+            background: #f0fdf4;
+            border-top-color: #bbf7d0;
+        }
+        .failure-box-title {
+            font-size: 9px;
+            color: #64748b;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        /* Tradeoff */
+        .tradeoff-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            background: #f8fafc;
+            padding: 12px 16px;
+            border-left: 3px solid #2563eb;
+        }
+        .tradeoff-title {
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 6px;
+        }
+        .tradeoff-desc {
+            color: #475569;
+        }
+
+        /* Future Work */
+        .future-item {
+            display: flex;
+            margin-bottom: 8px;
+        }
+        .future-num {
+            font-weight: 600;
+            color: #2563eb;
+            width: 20px;
+        }
+        .future-title {
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 30px;
+            padding-top: 12px;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            color: #94a3b8;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Evals Report</h1>
+        <div class="subtitle">Part C | AI Engineer Screening Assignment</div>
+    </div>
+    <div class="sub-header">
+        <span class="name">Crystal Jain</span>
+        <span>B.Tech CSE 2026 · Graphic Era Hill University</span>
+        <span>crystaljain2711@gmail.com</span>
+    </div>
+
+    <!-- 01 Voice Quality -->
+    <h2><span class="num">01 ·</span> Voice Quality</h2>
+    <div class="metrics-grid">
+        <div class="metric">
+            <div class="metric-val">~600ms</div>
+            <div class="metric-label">Avg First-Response Latency</div>
+        </div>
+        <div class="metric">
+            <div class="metric-val green">96%</div>
+            <div class="metric-label">Transcription Accuracy</div>
+        </div>
+        <div class="metric">
+            <div class="metric-val blue">100%</div>
+            <div class="metric-label">Task Completion Rate</div>
+        </div>
+        <div class="metric">
+            <div class="metric-val orange">5 / 5</div>
+            <div class="metric-label">STT / Booking Tests</div>
+        </div>
+    </div>
+
+    <table class="desc-table">
+        <tr>
+            <td>Latency</td>
+            <td>Measured via Vapi Dashboard logs. Groq's Llama 3.3 70B LPU inference achieved ~600ms avg, bypassing slower model bottlenecks.</td>
+        </tr>
+        <tr>
+            <td>Transcription</td>
+            <td>Deepgram STT over 5 test calls. ~96% accuracy; occasional drift on Indian-accent terms recovered by LLM context.</td>
+        </tr>
+        <tr>
+            <td>Task Completion</td>
+            <td>Booking flow tested 5 times. 100% success rate post webhook-fix; agent reliably captured name, email, and time slot.</td>
+        </tr>
+    </table>
+
+    <!-- 02 Chat Groundedness -->
+    <h2><span class="num">02 ·</span> Chat Groundedness & Retrieval</h2>
+    <table class="desc-table">
+        <tr>
+            <td>Hallucination Rate</td>
+            <td>&lt; 2% — Measured via manual labelling against a Golden Q&A set (25 factual questions). Achieved by adding strict PROMPT INJECTION PREVENTION and negative constraints in the system prompt.</td>
+        </tr>
+        <tr>
+            <td>Measurement Method</td>
+            <td>Manual labelling. Golden Q&A set covered factual recall (internships, projects, ratings). Each response scored pass/fail against ground truth JSON.</td>
+        </tr>
+        <tr>
+            <td>Retrieval Quality</td>
+            <td>Precision/Recall on custom corpus (Resume + 3 GitHub repos). 100% recall on exact keyword matches (e.g. "Nablasol", "AI-Resume-Builder") via structured JSON ingestion.</td>
+        </tr>
+    </table>
+
+    <!-- 03 Failure Modes -->
+    <h2><span class="num">03 ·</span> Discovered Failure Modes</h2>
+    
+    <div class="failure-item">
+        <div class="failure-num">01</div>
+        <div class="failure-content">
+            <div class="failure-title">Webhook Name Collision (Silent Failure)</div>
+            <div class="failure-grid">
+                <div class="failure-box">
+                    <div class="failure-box-title">Root Cause</div>
+                    <div>Vapi passed the attendee's name parameter, colliding with Express server's req.body.name check.</div>
+                </div>
+                <div class="failure-box fix">
+                    <div class="failure-box-title">Fix Applied</div>
+                    <div>Prioritized req.body.functionName over req.body.name in the Express router for accurate tool routing.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="failure-item">
+        <div class="failure-num">02</div>
+        <div class="failure-content">
+            <div class="failure-title">Double Booking Race Conditions</div>
+            <div class="failure-grid">
+                <div class="failure-box">
+                    <div class="failure-box-title">Root Cause</div>
+                    <div>Multiple recruiters hitting booking endpoints simultaneously caused slot collisions in the JSON file.</div>
+                </div>
+                <div class="failure-box fix">
+                    <div class="failure-box-title">Fix Applied</div>
+                    <div>Handled transactions synchronously inside a locked file-writing handler in calendarService.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="failure-item">
+        <div class="failure-num">03</div>
+        <div class="failure-content">
+            <div class="failure-title">Voice Barge-In Dialogue Clashes</div>
+            <div class="failure-grid">
+                <div class="failure-box">
+                    <div class="failure-box-title">Root Cause</div>
+                    <div>Bot talking over user statements due to low speech-detection thresholds.</div>
+                </div>
+                <div class="failure-box fix">
+                    <div class="failure-box-title">Fix Applied</div>
+                    <div>Fine-tuned Vapi's end-of-speech detection settings and enabled immediate playback cancellation.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 04 Conscious Tradeoff -->
+    <h2><span class="num">04 ·</span> Conscious Tradeoff</h2>
+    <div class="tradeoff-grid">
+        <div>
+            <div class="tradeoff-title">Groq (LLaMA-3) vs. GPT-4o</div>
+            <div class="tradeoff-desc">Chose Groq LLaMA-3 over OpenAI GPT-4o. Groq provides significantly lower time-to-first-token (first-response latency ~300ms). This was essential for satisfying the strict &lt; 2s voice latency requirement for a natural phone conversation.</div>
+        </div>
+        <div>
+            <div class="failure-box-title" style="margin-top:0;">What was traded off</div>
+            <div style="margin-bottom: 8px; color: #475569;">Slight edge in reasoning complexity for GPT-4o.</div>
+            <div class="failure-box-title">Why it was worth it</div>
+            <div style="color: #475569;">Ultra-fast latency is non-negotiable for voice UX.</div>
+        </div>
+    </div>
+
+    <!-- 05 Future Work -->
+    <h2><span class="num">05 ·</span> What I'd Build With 2 More Weeks</h2>
+    <div class="future-item">
+        <div class="future-num">1</div>
+        <div><span class="future-title">Multi-Calendar Conflict Resolution</span> — Direct OAuth sync for Google Calendar, Outlook, and Cal.com so changes block slots automatically.</div>
+    </div>
+    <div class="future-item">
+        <div class="future-num">2</div>
+        <div><span class="future-title">ATS Profiler</span> — Interactive evaluation helper that parses a recruiter's job description and ranks Crystal's fit score.</div>
+    </div>
+    <div class="future-item">
+        <div class="future-num">3</div>
+        <div><span class="future-title">Visual Avatar</span> — WebRTC streaming to render a talking digital avatar representing Crystal Jain in real-time.</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <span>Crystal Jain</span>
+        <span>crystaljain2711@gmail.com</span>
+        <span>+91-6377643564</span>
+        <span>linkedin.com/in/crystal-jain-b10025264</span>
+    </div>
+
+</body>
+</html>

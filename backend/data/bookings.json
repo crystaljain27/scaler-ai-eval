@@ -1,0 +1,52 @@
+[
+  {
+    "id": "mock-lklnl1vj4",
+    "name": "John Recruiter",
+    "email": "john@recruiter.com",
+    "date": "2026-06-08",
+    "time": "10:00 AM",
+    "createdAt": "2026-06-05T09:29:41.261Z",
+    "status": "confirmed",
+    "realCal": false
+  },
+  {
+    "id": 20514756,
+    "name": "shubhi",
+    "email": "crystaljain2711@gmail.com",
+    "date": "2026-06-08",
+    "time": "10:00 AM",
+    "createdAt": "2026-06-05T10:53:10.548Z",
+    "status": "confirmed",
+    "realCal": true
+  },
+  {
+    "id": 20515642,
+    "name": "hehe",
+    "email": "crystaljain2711@gmail.com",
+    "date": "2026-06-08",
+    "time": "02:00 PM",
+    "createdAt": "2026-06-05T11:18:02.399Z",
+    "status": "confirmed",
+    "realCal": true
+  },
+  {
+    "id": 20541284,
+    "name": "akshansh",
+    "email": "crystaljain2711@gmail.com",
+    "date": "2026-06-08",
+    "time": "12:30 PM",
+    "createdAt": "2026-06-05T18:40:46.086Z",
+    "status": "confirmed",
+    "realCal": true
+  },
+  {
+    "id": 20545801,
+    "name": "Terminal Tester",
+    "email": "crystaljain2711@gmail.com",
+    "date": "2026-06-10",
+    "time": "10:00 AM",
+    "createdAt": "2026-06-05T20:38:48.731Z",
+    "status": "confirmed",
+    "realCal": true
+  }
+]
