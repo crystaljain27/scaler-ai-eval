@@ -5,7 +5,7 @@ import { Phone, PhoneOff, Settings, Check, Copy, AlertTriangle } from 'lucide-re
 // Default mock/placeholder IDs (user can configure via UI settings tab)
 const DEFAULT_PUBLIC_KEY = 'aed23219-0fe8-4fcb-b3bd-f78202716656'; 
 const DEFAULT_ASSISTANT_ID = 'eb6f797a-64cc-464e-9da0-44aaf1854976';
-const VOICE_PHONE_NUMBER = '+91 63776 43564'; // Mock/placeholder number (recruiter can configure real one in Vapi)
+const VOICE_PHONE_NUMBER = '+1 (800) 555-0199'; // Mock/placeholder number (recruiter can configure real one in Vapi)
 
 const VOICE_SYSTEM_PROMPT = `
 You are the voice representative of Crystal Jain. Your goal is to represent her professionally and answer questions from recruiters about her background, projects, skills, and availability.

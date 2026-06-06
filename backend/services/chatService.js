@@ -92,7 +92,7 @@ class ChatService {
     }
 
     try {
-      const groq = new OpenAI({
+      const openai = new OpenAI({
         apiKey: key,
         baseURL: "https://api.groq.com/openai/v1"
       });
@@ -107,7 +107,7 @@ class ChatService {
       ];
 
       console.log(`[ChatService] Sending ${openaiMessages.length} messages to Groq LPU...`);
-      const response = await groq.chat.completions.create({
+      const response = await openai.chat.completions.create({
         model: 'llama-3.3-70b-versatile',
         messages: openaiMessages,
         tools: tools,
@@ -155,7 +155,7 @@ class ChatService {
         });
 
         console.log('[ChatService] Sending function response back to Groq...');
-        const followUpResponse = await groq.chat.completions.create({
+        const followUpResponse = await openai.chat.completions.create({
           model: 'llama-3.3-70b-versatile',
           messages: openaiMessages,
           tools: tools,
