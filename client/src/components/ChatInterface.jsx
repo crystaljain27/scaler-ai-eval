@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Calendar, CheckCircle, AlertCircle } from 'lucide-react';
 
-const API_BASE_URL = 'http://localhost:5000'; // Fallback to local server
+const API_BASE_URL = 'https://scaler-ai-eval.onrender.com'; // Live Render backend
 
 export default function ChatInterface() {
   const [messages, setMessages] = useState([
